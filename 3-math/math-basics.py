@@ -3,7 +3,7 @@ import math;
 #Here are all the functions in the math library: https://www.programiz.com/python-programming/modules/math
 
 def add(a, b):
-    #Inssert code here
+    #Insert code here
 
 def subtract(a, b):
     #Insert code here
