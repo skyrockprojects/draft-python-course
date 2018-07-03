@@ -1,1 +1,31 @@
-DIRECTIONS: Type in the code in the different functions to make them work. After all the functions are done, type in some test runs to make sure the code runs as expected.
+ABOUT: In most programming languages there are 3 main types of loops.
+
+For Loop:
+Probably the most common loop, the for loop allows you to go from one number to another. 
+To call a for loop, you can do "for x in range(0, 10):" and x will loop from 0 to 10. 
+If you want the loop to increase by a certain number, you can add an extra paramter to the range function that sets what number it increases by. 
+For example, "for x in range(0,10,2):" will loop from 0 to 10 and increase by 2.
+This is useful if you want to repeat a task with an increasing value.
+
+While Loop:
+While loops, instead of looping through a range of numbers, only loops while a boolean statement is true.
+To call a while loop, simply type "while():" and inside the parentheses insert a boolean statement.
+For example, if you type "while(true):" the loop will always be running since the boolean statement will always be true.
+
+Foreach Loops:
+Foreach loops are simple loops that loop through a list.
+To use foreach loops, similar to for loops, type "for x in list:" assuming list is already declared as a list.
+In this example, x will represent the various items inside the list, and the loop will run through every item in the list.
+
+Nested Loops:
+Nested loops are most commonly used alongside 2D lists.
+A nested loop is simply a loop inside a loop, hence the name nested loop.
+As afermentioned, nested loops are good to use to run through a 2D list.
+For example, assumming list_of_lists is a declared 2D list, you can loop through the items inside it like this:
+"for list in list_of_lists:
+	"for x in list:", where x would represent the items in the 2D list.
+
+DIRECTIONS: Using what you've learned from the previous lessons, you're going to be making three distinct function:
+
+First function:
+The first function, you will be 
