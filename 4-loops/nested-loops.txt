@@ -1,0 +1,56 @@
+ABOUT: This lesson is about a more challenging type of loop, the nested loop
+
+Nested Loops:
+Nested loops are most commonly used alongside 2D lists.
+A nested loop is simply a loop inside a loop, hence the name nested loop.
+As afermentioned, nested loops are good to use to run through a 2D list.
+For example, assumming list_of_lists is a declared 2D list, you can loop through the items inside it like this:
+"for list in list_of_lists:
+	"for x in list:", where x would represent the items in the 2D list.
+
+DIRECTIONS: For this lesson, you're going to make 4 functions
+
+First function: For the first function, you're going to want to run through the 2D array "collectives" (already declared) and print out every string that has a "p" or a "P" in the beginning.
+
+Second function: For the second function, you're going to print out a stair of asteriks.
+The function will have 1 parameter what will determine the size of the stairs.
+So for example, if the I insert three as the size, this should be printed out.
+*
+**
+***
+
+Third function: The third function will just be the second function but inverted, so if I call the function with a size of three, the output should be:
+***
+**
+*
+
+Fourth function: The fourth function will print out a pyramid of asteriks.
+Similair to the second and third function, the fourth function will have one parameter that determines the size of the pyramid.
+So if I set the size as 3, this should be the output:
+*
+**
+*
+
+Extra: Remake the 2nd, 3rd and 4th function but instead of asteriks, have a string.
+For example, if the string is "coding", these should the respective outcomes.
+
+c
+oo
+ddd
+iiii
+nnnnn
+gggggg
+
+cccccc
+ooooo
+dddd
+iii
+nn
+g
+
+c
+oo
+ddd
+iii
+nn
+g
