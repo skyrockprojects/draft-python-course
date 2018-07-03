@@ -1,0 +1,1 @@
+DIRECTIONS: Type in the code in the different functions to make them work. After all the functions are done, type in some test runs to make sure the code runs as expected.
