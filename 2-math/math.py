@@ -1,16 +1,16 @@
 def add(a, b):
-    """ INSERT CODE IN HERE """
-
+    #INSERT CODE HERE
+    return a+b
 def subtract(a, b):
-    """ INSERT CODE IN HERE """
+#     #INSERT CODE HERE
 
 def multiply(a, b):
-    """ INSERT CODE IN HERE """
+#     #INSERT CODE HERE
 
 def divide(a, b):
-    """ INSERT CODE IN HERE """
+#     #INSERT CODE HERE
 
-def module(a,b):
-    """ INSERT CODE IN HERE """
+def module(a, b):
+#     #INSERT CODE HERE
 
-""" INSERT TEST RUNS HERE """
+#ADD TESTING HERE
