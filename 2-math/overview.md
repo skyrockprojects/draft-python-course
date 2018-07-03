@@ -1,6 +1,6 @@
 # Overview
 
 The Math portion will focus on:
-1. Single Arithmatic
-2. Combined Arithmatic
+1. Simple Math
+2. Complex Math
 3. Recognizing Algorithms
