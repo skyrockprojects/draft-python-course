@@ -17,15 +17,14 @@ Foreach loops are simple loops that loop through a list.
 To use foreach loops, similar to for loops, type "for x in list:" assuming list is already declared as a list.
 In this example, x will represent the various items inside the list, and the loop will run through every item in the list.
 
-Nested Loops:
-Nested loops are most commonly used alongside 2D lists.
-A nested loop is simply a loop inside a loop, hence the name nested loop.
-As afermentioned, nested loops are good to use to run through a 2D list.
-For example, assumming list_of_lists is a declared 2D list, you can loop through the items inside it like this:
-"for list in list_of_lists:
-	"for x in list:", where x would represent the items in the 2D list.
-
 DIRECTIONS: Using what you've learned from the previous lessons, you're going to be making three distinct function:
 
 First function:
-The first function, you will be 
+The first function, you will be printing random numbers from 0 to 10 using the randint(a, b) function that gives you a random int depending on the parameters you put in.
+The loop will stop once the code prints the number 5.
+
+Second function:
+For the second function, you're going to want to loop through the numbers from 0 to 100 and only print the prime numbers.
+
+Third function:
+For the thir function, you're going to want to loop through the list "collectives" (already declared) and only print the strings in the list that start out with a "b" or "B".

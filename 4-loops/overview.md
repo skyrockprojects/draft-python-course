@@ -1,6 +1,7 @@
 # Overview
 
 The Loops portion will focus on:
-1. While loops
-2. For each loops
-3. Nested loops
+1. For loops
+2. While loops
+3. Foreach loops
+4. Nested loops
