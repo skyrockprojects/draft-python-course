@@ -27,4 +27,4 @@ Second function:
 For the second function, you're going to want to loop through the numbers from 0 to 100 and only print the prime numbers.
 
 Third function:
-For the thir function, you're going to want to loop through the list "collectives" (already declared) and only print the strings in the list that start out with a "b" or "B".
+For the third function, you're going to want to loop through the list "collectives" (already declared) and only print the strings in the list that start out with a "b" or "B".
