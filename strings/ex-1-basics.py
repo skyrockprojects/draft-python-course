@@ -22,4 +22,29 @@ numberedString = "12345" # 5 characters
 
 print("numberedString length = "+str(len(numberedString)))
 
-# 
+#there are two more useful methods that will be useful in a couple situations
+#.upper() makes the string UPPERCASE
+#and .lower() makes the string lowsercase
+
+exampleWord = "Word"
+#original
+print(exampleWord.lower())
+
+#all lowercase
+print(exampleWord.lower())
+
+#all uppercase
+print(exampleWord.upper())
+
+#escape characters are things that you can't actually type with your keyboard
+#so they made "codes" for them
+
+#the most common one is: \n which adds a new line
+print("firstline\nsecondline")
+
+#you can also add a tab
+print("\ttabbed")
+
+#and if you want to have a blackslash in a string you have to escape it to
+
+print("\\ <--single backslash")
