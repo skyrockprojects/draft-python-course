@@ -4,6 +4,7 @@ An In progress Intro to Python course by Declan and Balta
 # Overview
 
 This Intro to Python course will have 7 different parts:
+
 0. [Introduction](https://github.com/skyrockprojects/draft-python-course/blob/master/introduction/README.MD)
 1. [Boolean Logic](https://github.com/skyrockprojects/draft-python-course/blob/master/boolean-logic/README.MD)
 2. [Math](https://github.com/skyrockprojects/draft-python-course/blob/master/math/README.MD)
