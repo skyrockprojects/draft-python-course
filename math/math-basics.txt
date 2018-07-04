@@ -1,4 +1,4 @@
-ABOUT: Math is a vital part of programming and allows you to perform a variety of functions
+ABOUT: Math is a vital part of programming and allows you to perform a variety of actions
 Math in Python works the same as in real life (e.g. 2 + 2 will return 4), but a few operators might be a bit trickier to use in python
 To perform these functions, you're going to need to import the math library (it's already been imported into math-basics.py)
 
