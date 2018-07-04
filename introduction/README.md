@@ -1,6 +1,6 @@
 # Overview
 
-The Strings portion will focus on:
+The Introduction portion will focus on:
 1. Variables
 2. Functions
 3. Test Cases
