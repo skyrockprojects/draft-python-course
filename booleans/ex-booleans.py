@@ -111,4 +111,15 @@ def superSimpleSchool(day,vacation):
 alsoTrue = exampleTrue
 
 if exampleTrue and alsoTrue:
-    print("This prints")
+    print("This prints because exampleTrue and alsoTrue are both true")
+
+if exampleTrue and exampleFalse:
+    print("This doesn't print because although exampleTrue is true exampleFalse isn't")
+
+#the not operator flips the boolean, if it is true it returns false and vice versa
+
+if not exampleFalse:
+    print("This prints because not returned true because exampleFalse is false")
+
+if not exampleTrue:
+    print("This did not print because not exampleTrue is false")
