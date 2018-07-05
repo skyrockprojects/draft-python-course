@@ -1,21 +1,2 @@
-ABOUT: Math is a vital part of programming and allows you to perform a variety of actions
-Math in Python works the same as in real life (e.g. 2 + 2 will return 4), but a few operators might be a bit trickier to use in python
-To perform these functions, you're going to need to import the math library (it's already been imported into math-basics.py)
-
-Module: Module is a commonly used function in programming
-It's represented using a percentage sign (%) and gives you the remainder of two numbers
-For example, 5 % 2 would be equal to 1 since the remainder of 5 divided by 2 is 1
-
-Absolute: To get the absolute value of a number, you can use the abs(number) function where you insert the number you want to get the absolute value from into the function
-For example abs(5 - 6) would return 1 since the absolute value of 5 - 6 is 1
-
-Power: To get a raised to the power of b, you're going to have to use the math library, more specifically, the pow function
-You must insert two variables into the function
-For example math.pow(2,3) would return 2 raised to the power of 3, which is 8
-
-Square Root: Once again, you're going to have to use a function from the math library to get the square root of a number
-The sqrt(x) functions returns the square root of x
-For example, math.sqrt(16) would return the square root of 16, which is 4 
-
 DIRECTIONS: Make 8 different functions, 4 for the standard arithmatic operators (+,-,*,/) and one for the functions listed above
 So for example, the addition function you will be making should accept in two parameters and return the sum of the two parameters

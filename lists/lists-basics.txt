@@ -1,27 +1,2 @@
-ABOUT: Lists (or Arrays) are a fundemental part of most programming languages. In Python, lists are flexible and able to consist of a variety of types
-
-Lists:
-To declare a list simply type this:
-name_of_list = ["stuff", 5, true]
-You can insert anything you want in the list (strings, integers, bools, etc.) seperated by commas and all within square brackets.
-You can get acces to the various elements in a list using indices.
-An index represents the location of an elements inside a list.
-The first index is always 0 and increases as you add elements.
-So for example, if I want to get the number 5 from name_of_list, I would call name_of_list[1] since the index of 5 is 1.
-If I wanted to change "stuff" to "book", I would do name_of_list[0] = "book"
-Some useful methods for lists include:
-len(name_of_list): gives you the length of a list
-list.append(name_of_list): adds an item to a list
-list.remove(item_of_the_list): removes the item from a list
-Other methods can be found here: https://www.programiz.com/python-programming/methods/list
-
-2D Lists:
-A 2D list is just a list made up of lists.
-To declare one simply type:
-list_of_lists = [[1,2,3],[a,b,c],[true,false]]
-2D work the same as regular lists just with an added bit of complexity
-If I want to access the 2 from the 2D list, I would have to first locate the list 2 is in and then locate it's index within the list it is in
-So because 2 is in the first list of the 2D list and within that first list it's the 2nd element, to access 2 I would do list_of_lists[0][1]
-
 DIRECTIONS: Make one normal list and one 2D list and for each list print out three of their elements
 The two lists must be made up of a variety of types (i.e strings, integers, bools etc.)

@@ -1,13 +1,3 @@
-ABOUT: This lesson is about a more challenging type of loop, the nested loop
-
-Nested Loops:
-Nested loops are most commonly used alongside 2D lists.
-A nested loop is simply a loop inside a loop, hence the name nested loop.
-As afermentioned, nested loops are good to use to run through a 2D list.
-For example, assumming list_of_lists is a declared 2D list, you can loop through the items inside it like this:
-"for list in list_of_lists:
-	"for x in list:", where x would represent the items in the 2D list.
-
 DIRECTIONS: For this lesson, you're going to make 4 functions
 
 First function: For the first function, you're going to want to run through the 2D array "collectives" (already declared) and print out every string that has a "p" or a "P" in the beginning.
