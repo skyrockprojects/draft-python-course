@@ -5,7 +5,7 @@
 #This represents an Integer
 exampleInteger = 3
 
-#This variable reprents a String
+#This variable represents a String
 exampleString = "This is a String"
 
 #This variable represents a list of things
