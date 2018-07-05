@@ -1,22 +1,3 @@
-ABOUT: In most programming languages there are 3 main types of loops.
-
-For Loop:
-Probably the most common loop, the for loop allows you to go from one number to another. 
-To call a for loop, you can do "for x in range(0, 10):" and x will loop from 0 to 10. 
-If you want the loop to increase by a certain number, you can add an extra paramter to the range function that sets what number it increases by. 
-For example, "for x in range(0,10,2):" will loop from 0 to 10 and increase by 2.
-This is useful if you want to repeat a task with an increasing value.
-
-While Loop:
-While loops, instead of looping through a range of numbers, only loops while a boolean statement is true.
-To call a while loop, simply type "while():" and inside the parentheses insert a boolean statement.
-For example, if you type "while(true):" the loop will always be running since the boolean statement will always be true.
-
-Foreach Loops:
-Foreach loops are simple loops that loop through a list.
-To use foreach loops, similar to for loops, type "for x in list:" assuming list is already declared as a list.
-In this example, x will represent the various items inside the list, and the loop will run through every item in the list.
-
 DIRECTIONS: Using what you've learned from the previous lessons, you're going to be making three distinct function:
 
 First function:

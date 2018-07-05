@@ -1,1 +1,0 @@
-collectives = [["bear", "pen", "Eraser"],["Bee", "phone", "computer"], ["book", "Pencil", "television"]]
