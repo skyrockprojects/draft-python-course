@@ -2,17 +2,17 @@ ABOUT: Lists (or Arrays) are a fundemental part of most programming languages. I
 
 Lists:
 To declare a list simply type this:
-list = ["stuff", 5, true]
+name_of_list = ["stuff", 5, true]
 You can insert anything you want in the list (strings, integers, bools, etc.) seperated by commas and all within square brackets.
 You can get acces to the various elements in a list using indices.
 An index represents the location of an elements inside a list.
 The first index is always 0 and increases as you add elements.
-So for example, if I want to get the number 5 from list, I would call list[1] since the index of 5 is 1.
-If I wanted to change "stuff" to "book", I would do list[0] = "book"
+So for example, if I want to get the number 5 from name_of_list, I would call name_of_list[1] since the index of 5 is 1.
+If I wanted to change "stuff" to "book", I would do name_of_list[0] = "book"
 Some useful methods for lists include:
-len(list): gives you the length of a list
-list.append(item): adds an item to a list
-list.remove(item): removed the item from a list
+len(name_of_list): gives you the length of a list
+list.append(name_of_list): adds an item to a list
+list.remove(item_of_the_list): removes the item from a list
 Other methods can be found here: https://www.programiz.com/python-programming/methods/list
 
 2D Lists:
