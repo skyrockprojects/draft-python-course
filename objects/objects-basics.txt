@@ -1,22 +1,2 @@
-ABOUT: Object oriented programming is a very common form of programming and consists of objects filled with data
-An object can be whatever you want it to be and can contain as many variables as you want of any type you want
-To declare an object, you must first create a class, and you do it like this "class name_of_class:"
-
-Constructor:
-Inside the class, you must have what is called a constructor, and this will allow you to set all the variables inside the object
-To create the constructor, simply type this inside the class
-def __init__(self, variableA, variableB):
-	self.variableA = variableA
-	self.variableB = variableB
-
-Counter:
-Another common attribute give to every class is a counter
-This will count the amount of objects you have declared of a class
-To add this simply add this into your class "name_of_counter = 0" and inside the constructor add "name_of_class.name_of_counter+=1"
-
-Initialization:
-To initiate the object simply do "name_of_object = name_of_class("whatever you want to set variableA as", "whatever you want to set variableB as")"
-You can have other functions inside the object that do whatever you want and you can call them by doing this "name_of_object.name_of_function()"
-
 DIRECTIONS: Make an object with a minumum of two variables with more than two types of variables, a constructor, a counter and a function that displays the variables of the object
 
