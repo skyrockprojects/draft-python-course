@@ -12,7 +12,7 @@ class Card:
         # 14 is ace
         self.value = value
 
-    def conpareTo(otherCard):
+    def compareTo(self, otherCard):
         # returns negative number if the other card is bigger
         # returns positive number if this card is bigger
         # reurns 0 if they are the same
@@ -31,6 +31,10 @@ class Deck:
             print(str(card.value))
     def shuffle(self):
         random.shuffle(self.cardList)
+    def deal(self, amount, playerone, playertwo):
+        for i in range(amount):
+            playerone.recieve(self.cardList.pop())
+            playerone.recieve(self.cardList.pop())
 
 deck = Deck()
 deck.shuffle()
@@ -38,4 +42,8 @@ deck.print()
 
 class Player:
     def __init__(self, hand):
-
+        self.hand = hand
+    def give(self, player):
+        player.recieve(self.hand.pop())
+    def recieve(self, cards):
+        self.hand.append(cards)
