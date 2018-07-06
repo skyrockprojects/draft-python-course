@@ -4,7 +4,8 @@
 
 ```python
 def stringFunction(exampleString):
-    asd
+    print(exampleString+" "+str(len(exampleString)))
+    return exampleString.split()
 ```
 
 ### What does the function above do?
