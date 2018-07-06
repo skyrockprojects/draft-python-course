@@ -18,7 +18,7 @@ def unknownFunction(num, returnString):
         return "Unknown number!"
 ```
 
-### What does the code above do?
+### What does the function above do?
 
 \
 \

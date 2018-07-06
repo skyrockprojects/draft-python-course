@@ -1,24 +1,13 @@
-# Introduction Worksheet
+# Strings Worksheet
 
 ## Example Code
 
 ```python
-def exampleFunction(exampleInput):
-    print(exampleInput)
-
-#TEST CASES
-exampleString = "example"
-exampleInteger = "12345"
-exapmleBoolean = True
-exampleList = ["one",2,"three",4]
-
-exampleFunction(exampleString)
-exampleFunction(exampleIntger)
-exampleFunction(exampleBoolean)
-exampleFunction(exampleList)
+def stringFunction(exampleString):
+    asd
 ```
 
-### What does the code above do?
+### What does the function above do?
 
 \
 \
