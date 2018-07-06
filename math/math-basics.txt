@@ -1,2 +1,0 @@
-DIRECTIONS: Make 8 different functions, 4 for the standard arithmatic operators (+,-,*,/) and one for the functions listed above
-So for example, the addition function you will be making should accept in two parameters and return the sum of the two parameters

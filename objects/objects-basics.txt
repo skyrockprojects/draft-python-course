@@ -1,2 +1,0 @@
-DIRECTIONS: Make an object with a minumum of two variables with more than two types of variables, a constructor, a counter and a function that displays the variables of the object
-

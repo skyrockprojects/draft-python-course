@@ -1,2 +1,0 @@
-DIRECTIONS: Make one normal list and one 2D list and for each list print out three of their elements
-The two lists must be made up of a variety of types (i.e strings, integers, bools etc.)
