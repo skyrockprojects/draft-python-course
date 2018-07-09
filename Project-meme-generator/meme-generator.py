@@ -37,7 +37,7 @@ def addText(text, yPos):
     draw.text(bottomLeft, text, black, font=font)
     draw.text((x,y),text, white, font=font)
 print("gimme top text")
-topText = input(" text: ").upper()
+topText = input("top text: ").upper()
 topPos = 0
 addText(topText, topPos)
 print("gimme bottom text")
