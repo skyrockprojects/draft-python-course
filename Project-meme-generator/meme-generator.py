@@ -1,33 +1,52 @@
 from PIL import Image, ImageFont, ImageDraw
 import requests
 from io import BytesIO
+fontFamily = "impact.ttf"
 
-# class Meme:
-#     def __init__(self, picture, topText, bottomText):
-#         self.picture = picture
-#         self.topText = topText
-#         self.bottomText = bottomText
-
-#     def print(self):
-#         print(self.topText)
-#         print(self.picture)
-#         print(self.bottomText)
-
-#     def toString(self):
-#         return self.topText + "\n" + self.picture + "\n" + self.bottomText
-
-message = ""
 print("gimme link")
-message = input("link: ")
-response = requests.get(message.strip())
+url = input("link: ")
+response = requests.get(url)
 img = Image.open(BytesIO(response.content))
-print("gimme top text")
-message = input("top text: ")
 draw = ImageDraw.Draw(img)
-# font = ImageFont.truetype(<font-file>, <font-size>)
-font = ImageFont.truetype("impact.ttf", 50)
-# draw.text((x, y),"Sample Text",(r,g,b))
-draw.text((0, 0),message.upper(),(0,0,0),font=font)
+img_fraction = 0.15
+desiredHeight = img_fraction*img.size[1]
+desiredWidth = img.size[0]
+def currentHeight(text, font):
+    return font.getsize(text)[1]
+def currentWidth(text, font):
+    return font.getsize(text)[0]
+def addText(text, yPos):
+    fontSize = 1
+    font = ImageFont.truetype(fontFamily, fontSize)
+    while currentHeight(text, font) < desiredHeight and currentWidth(text, font) < desiredWidth:
+        fontSize += 1
+        font = ImageFont.truetype(fontFamily, fontSize)
+    halfWidth = img.size[0]/2-font.getsize(text)[0]/2
+    x = halfWidth
+    y = yPos
+    black = (0,0,0)
+    white = (255,255,255)
+    Left = (x-2, y-2)
+    Right = (x+2, y-2)
+    bottomRight = (x+2, y+2)
+    bottomLeft = (x-2, y+2)
+    draw.text(Left, text, black, font=font)
+    draw.text(Right, text, black, font=font)
+    draw.text(bottomRight, text, black, font=font)
+    draw.text(bottomLeft, text, black, font=font)
+    draw.text((x,y),text, white, font=font)
+print("gimme top text")
+topText = input(" text: ").upper()
+topPos = 0
+addText(topText, topPos)
 print("gimme bottom text")
-message = input("bottom text: ")
+bottomText = input("bottom text: ").upper()
+tempFontSize = 1
+tempFont = ImageFont.truetype(fontFamily, tempFontSize)
+while currentHeight(bottomText, tempFont) < desiredHeight and currentWidth(bottomText, tempFont) < desiredWidth:
+        tempFontSize += 1
+        tempFont = ImageFont.truetype(fontFamily, tempFontSize)
+bottomPos = img.size[1]-tempFont.getsize(bottomText)[1]
+addText(bottomText, bottomPos)
 img.save('sample-out.jpg')
+img.show()
