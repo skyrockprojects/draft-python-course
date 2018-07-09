@@ -3,7 +3,7 @@ import requests
 from io import BytesIO
 fontFamily = "impact.ttf"
 print("gimme file name")
-name = input("name": )
+name = input("name: ")
 print("gimme link")
 url = input("link: ")
 response = requests.get(url)
