@@ -2,7 +2,8 @@ from PIL import Image, ImageFont, ImageDraw
 import requests
 from io import BytesIO
 fontFamily = "impact.ttf"
-
+print("gimme file name")
+name = input("name": )
 print("gimme link")
 url = input("link: ")
 response = requests.get(url)
@@ -48,5 +49,5 @@ while currentHeight(bottomText, tempFont) < desiredHeight and currentWidth(botto
         tempFont = ImageFont.truetype(fontFamily, tempFontSize)
 bottomPos = img.size[1]-tempFont.getsize(bottomText)[1]
 addText(bottomText, bottomPos)
-img.save('sample-out.jpg')
+img.save(name+'.jpg')
 img.show()
