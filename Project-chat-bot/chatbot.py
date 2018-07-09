@@ -1,63 +1,151 @@
-import webbrowser
-
+from random import randint
 class ChatBot:
-    def __init__(self, chats):
-        self.chats = chats
-    def start(self):
-        self.input = ""
-        print("Type \"exit\" to exit.")
-        while(self.input != "exit"):
-            self.input = input("> ")
-            for chat in self.chats:
-                chat.input(self.input)
 
-class SimpleChat:
-    def __init__(self, aliases, response):
-        self.aliases = aliases
-        self.response = response
-    def input(self, input):
-        if input in self.aliases:
-            print(self.response)
+    # Get a default greeting   
+    # @return a greeting
+    def getGreeting(self):
+        return "Hello, let's talk."
+    
+    # Gives a response to a user statement
+    # @param statement
+    #            the user statement
+    # @return a response based on the rules given
+    def getResponse(self, statement):
+    
+        response = ""
+        if(len(statement) == 0):
+            response = "Say something, please."
 
-class AdvancedChat:
-    def __init__(self, inputCheck, response):
-        self.response = response
-        self.inputCheck = inputCheck
-    def input(self, input):
-        if self.inputCheck(input):
-            self.response(input)
+        elif(findKeyword(statement, "no", 0) >= 0):
+            response = "Why so negative?"
+        
+        elif(findKeyword(statement, "mother", 0) >= 0
+                or findKeyword(statement, "father", 0) >= 0
+                or findKeyword(statement, "sister", 0) >= 0
+                or findKeyword(statement, "brother", 0) >= 0):
+            response = "Tell me more about your family."
 
-hi = SimpleChat(["hi","hello","hey"],"hi")
-def hiResponse(self, input):
-    print(input)
-def hiCheck(self, input):
-    if input in ["hi","hello","hey"]:
-        return true
-    return false
-hi = AdvancedChat(hiCheck, hiResponse)
-chatList = [hi]
-chatBot = ChatBot(chatList)
-chatBot.start()
-# def chatBot(text):
-#     if(text == "hi"):
-#         print("hello")
-#     elif(text == "hello"):
-#         print("hi")
-#     elif(text.split()[:2] == ["count", "to"]):
-#         try: 
-#             for count in range(1,int(text.split()[2])+1):
-#                 print(str(count))
-#         except ValueError:
-#             print("I can't count to that ya dingus.")
-#     elif(text == "obunga"):
-#         print("obunga")
-#         webbrowser.open('https://cdn.discordapp.com/attachments/441183518588928029/464634625524760577/obunga.jpg')
-#     elif(text.split()[0] == "add"):
-#         print(text.split()[1]+" + "+ text.split()[3]+" = " + str(int(text.split()[1])+int(text.split()[3])))
-#     else:
-#         print("I can't do that")
-# print("Type \"exit\" to exit")
-# chat = ""
-# while(chat != "exit"):
-#     chat = input("> ")
-#     chatBot(chat)
+        elif(findKeyword(statement, "dog", 0) >= 0
+                or findKeyword(statement, "cat", 0)>= 0):
+            response = "Tell me more about your pets."
+        
+        #Responses which require transformations
+        elif(findKeyword(statement, "I want to", 0) >= 0):
+            response = transformIWantToStatement(statement)
+        
+        elif(findKeyword(statement, "I want", 0) >= 0):
+        
+            response = transformIWantStatement(statement)
+        
+        else:
+            # Look for a two word (you <something> me)
+            # pattern
+            psnOfYou = findKeyword(statement, "you", 0)
+            psnOfI = findKeyword(statement, "I", 0)
+            if(psnOfYou >= 0
+                    and findKeyword(statement, "me", psnOfYou) >= 0):
+                response = transformYouMeStatement(statement)
+            
+            elif(psnOfI >= 0
+                        and findKeyword(statement, "you", psnOfI) >= 0):
+                response = transformIYouStatement(statement)
+
+            else:
+                response = getRandomResponse()
+
+        return response
+    
+# Take a statement with "I want to <something>." and transform it into 
+# "What would it mean to <something>?"
+# @param statement the user statement, assumed to contain "I want to"
+# @return the transformed statement
+def transformIWantToStatement(statement):
+    #Remove the final period, if there is one
+    statement = statement.strip()
+    lastChar = statement[len(statement) - 1]
+    if (lastChar == '.'):
+        statement = statement[0, len(statement) - 1]
+    
+    psn = findKeyword(statement, "I want to", 0)
+    restOfStatement = statement[psn + 9:].strip()
+    return "What would it mean to " + restOfStatement + "?"
+
+def transformIWantStatement(statement):
+    #Remove the final period, if there is one
+    statement = statement.strip()
+    lastChar = statement[len(statement) - 1]
+    if (lastChar == '.'):
+        statement = statement[0, len(statement) - 1]
+    
+    psn = findKeyword(statement, "I want", 0)
+    restOfStatement = statement[psn + 6:].strip()
+    return "Would you really be happy if you had " + restOfStatement + "?"
+
+# Take a statement with "you <something> me" and transform it into 
+# "What makes you think that I <something> you?"
+# @param statement the user statement, assumed to contain "you" followed by "me"
+# @return the transformed statement
+def transformYouMeStatement(statement):
+    #Remove the final period, if there is one
+    statement = statement.strip()
+    lastChar = statement[len(statement) - 1]
+    if (lastChar == '.'):
+        statement = statement[0, len(statement) - 1]
+    
+    psnOfYou = findKeyword(statement, "you", 0)
+    psnOfMe = findKeyword(statement, "me", psnOfYou + 3)
+    
+    restOfStatement = statement[psnOfYou + 3:psnOfMe].strip()
+    return "What makes you think that I " + restOfStatement + " you?"
+
+def transformIYouStatement(statement):
+    #Remove the final period, if there is one
+    statement = statement.strip()
+    lastChar = statement[len(statement) - 1]
+    if (lastChar == '.'):
+        statement = statement[0, len(statement) - 1]
+
+    psnOfYou = findKeyword(statement, "I", 0)
+    psnOfMe = findKeyword(statement, "you", psnOfYou + 1)
+    
+    restOfStatement = statement[psnOfYou + 1: psnOfMe].strip()
+    return "Why do you " + restOfStatement + " me?"
+
+# Search for one word in phrase.  The search is not case sensitive.
+# This method will check that the given goal is not a substring of a longer string
+# (so, for example, "I know" does not contain "no").  
+# @param statement the string to search
+# @param goal the string to search for
+# @param startPos the character of the string to begin the search at
+# @return the index of the first occurrence of goal in statement or -1 if it's not found
+def findKeyword(statement, goal, startPos):
+    phrase = statement.strip()
+    #The only change to incorporate the startPos is in the line below
+    psn = phrase.lower().find(goal.lower(), startPos)
+
+    #Refinement--make sure the goal isn't part of a word 
+    while (psn >= 0):
+        #Find the string of length 1 before and after the word
+        before = " "
+        after = " " 
+        if (psn > 0):
+            before = phrase[psn - 1: psn].lower()
+        
+        if (psn + len(goal) < len(phrase)):
+            after = phrase[psn + len(goal): psn + len(goal) + 1].lower()
+        
+        #If before and after aren't letters, we've found the word
+        if ((not before.isalpha()) and (not after.isalpha())):
+            return psn
+        
+        #The last position didn't work, so let's find the next, if there is one.
+        psn = phrase.lower().find(goal.lower(), psn + 1)
+    
+    return -1
+
+# Pick a default response to use if nothing else fits.
+# @return a non-committal string
+def getRandomResponse():
+    responses = ["Interesting, tell me more.","Hmmm.","Do you really think so?","You don't say.","Understandable have a nice day.","You know I had to do it to 'em.","Response machine broke"]
+    r = randint(0,len(responses)-1)
+    return responses[r]
