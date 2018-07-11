@@ -1,11 +1,9 @@
-# Contacts Project
+# ChatBot Project
 ## Overview
-In this lab project, you will complete the implementation of a "Contacts" application. A "Contact" will consist of a name (first and last), and an email. This application will be menu driven and will perform the following:
+In this lab project, you will be understanding how this chatbot works and adding upon it. There will be various tasks for you to complete within the already finished chatbot.
 
-## Criteria
-1.	Add new contacts to the list
-2.	Print the contacts (in a nicely formatted way)
-3.	Remove an existing contact
-4.	Modify an existing contact (name or email address)
-5.	Sort contacts by name or email address
-6.	Search for a contact (by name or email address)
+## Tasks
+1.	Add a new non-transformative response to the chatbot
+2.	Add a new simple transformative response to chatbot
+3.	Add a new two-word transformative response to chatbot
+4.	Add multiple new random responses (responses if the statement doesn't fit any of the dedicated reponses)
