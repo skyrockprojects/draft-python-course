@@ -7,6 +7,7 @@ def currentHeight(text, font):
 def currentWidth(text, font):
     return font.getsize(text)[0]
 fontFamily = "impact.ttf"
+class 
 
 
 class Meme:
