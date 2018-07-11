@@ -1,6 +1,6 @@
 # Overview
 
-The Strings portion will focus on:
-1. Printing
-2. Concatenation
-3. Manipulation
+The Lists portion will focus on:
+1. Declaration
+2. Indices
+3. 2D Lists
